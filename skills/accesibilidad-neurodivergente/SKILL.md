@@ -112,6 +112,6 @@ Ordena por severidad, no por categoría. Termina con lo que no pudiste comprobar
 
 ## Referencias
 
-`scripts/audit_render.py` renderiza un HTML y devuelve métricas de accesibilidad en JSON (úsalo con `python3 -I`). Es una ayuda, no un veredicto: las herramientas automáticas no detectan casi nada cognitivo.
+`scripts/audit_render.py` renderiza un HTML (ruta local o URL) y devuelve métricas de accesibilidad en JSON. Ejecútalo con `python3 -I scripts/audit_render.py <ruta-o-url>` (`python -I` en Windows) o, si hay uv, con `uv run --with playwright python -I scripts/audit_render.py <ruta-o-url>`. Es una ayuda, no un veredicto: las herramientas automáticas no detectan casi nada cognitivo.
 
 Para profundizar o citar fuentes (guías de diseño, WCAG, dislexia, artículos académicos), lee `references/fuentes.md`. Está basada en la recopilación de Mía Salazar para su charla en Commit Conf. Antes de citar un enlace como evidencia, ábrelo: es una lista de referencias, no un conjunto de estudios verificados uno a uno.
