@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Página con barreras</title>
+  <style>
+    body { overflow: hidden; margin: 0; }
+    .lienzo { width: 1280px; font-size: 10px; }
+    .pulso { animation: pulso 1s infinite; }
+    @keyframes pulso { from { opacity: 1; } to { opacity: .5; } }
+  </style>
+</head>
+<body>
+  <div class="lienzo">
+    <div class="pulso">Texto diminuto y animado sin respetar movimiento reducido</div>
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="10" height="10">
+    <button style="width:20px;height:20px"></button>
+    <a href="#"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="10" height="10" alt=""></a>
+    <video autoplay muted width="10" height="10"></video>
+  </div>
+</body>
+</html>

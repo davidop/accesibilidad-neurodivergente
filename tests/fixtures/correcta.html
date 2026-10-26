@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página correcta</title>
+  <style>
+    body { font: 1.125rem/1.6 system-ui, sans-serif; max-width: 70ch; margin: 0 auto; padding: 1rem; }
+    button, input { font: inherit; }
+    .pulso { animation: pulso 1s infinite; }
+    @keyframes pulso { from { opacity: 1; } to { opacity: .5; } }
+    @media (prefers-reduced-motion: reduce) { .pulso { animation: none; } }
+  </style>
+</head>
+<body>
+  <header><nav><a href="#contenido">Ir al contenido</a></nav></header>
+  <main id="contenido">
+    <h1>Solicitud de cita</h1>
+    <p class="pulso">Rellena tus datos. Tardarás unos dos minutos.</p>
+    <form>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" autocomplete="given-name">
+      <button type="submit">Enviar solicitud</button>
+      <a href="/ayuda" aria-labelledby="ayuda-txt"><svg width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg></a>
+      <span id="ayuda-txt" hidden>Ayuda</span>
+      <a href="/inicio"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="24" height="24" alt="Inicio"></a>
+    </form>
+  </main>
+  <footer><p>Pie de página</p></footer>
+</body>
+</html>
