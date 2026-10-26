@@ -5,7 +5,7 @@ license: MIT
 compatibility: Compatible con agentes que soporten Agent Skills (SKILL.md). El script opcional scripts/audit_render.py requiere Python 3 y Playwright con Chromium; sin ellos, la auditoría se limita al código y contenido.
 metadata:
   author: David Oliva Paredes
-  version: "0.1.0"
+  version: "0.1.1"
   language: es
 ---
 
