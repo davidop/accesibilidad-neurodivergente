@@ -1,0 +1,70 @@
+name: Proponer o corregir una recomendación
+description: Añadir, cambiar o retirar un punto del checklist de la skill.
+title: "[Recomendación] "
+labels: ["recomendación"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por proponer un cambio. Lo más útil es un caso real y una fuente que lo respalde.
+        **No incluyas datos personales reales** (nombres, correos, capturas con datos de clientes).
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de cambio
+      options:
+        - Nueva recomendación
+        - Corregir una recomendación existente
+        - Retirar una recomendación
+        - Cambiar la etiqueta de evidencia
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoría del checklist
+      options:
+        - Texto y legibilidad
+        - Estructura y atención
+        - Predecibilidad y lenguaje
+        - Sensorial
+        - Motricidad y entrada
+        - Aplicación por formato (web, decks, Word, PowerPoint, PDF, correo)
+        - Otra
+    validations:
+      required: true
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Recomendación propuesta
+      description: Redáctala como quedaría en SKILL.md. Si corriges una existente, cita el texto actual.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evidencia
+    attributes:
+      label: Etiqueta de evidencia
+      description: "[WCAG] si está en un criterio normativo; [Guía] si viene de una organización especializada; [Heurística] si es práctica común sin respaldo claro."
+      options:
+        - "[WCAG]"
+        - "[Guía]"
+        - "[Heurística]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: fuente
+    attributes:
+      label: Fuente
+      description: Enlace al criterio WCAG, guía o estudio. Obligatoria para [WCAG] y [Guía].
+      placeholder: https://www.w3.org/WAI/WCAG22/Understanding/...
+
+  - type: textarea
+    id: caso
+    attributes:
+      label: Caso real o motivación
+      description: ¿Qué barrera has visto y a quién afectaba? Describe el perfil sin diagnosticar a nadie.
