@@ -17,7 +17,7 @@ jobs:
     name: Comprobar enlaces
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: lycheeverse/lychee-action@v2
         with:
           # 403 y 429: muchos sitios bloquean bots o limitan peticiones aunque el enlace funcione.
