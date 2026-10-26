@@ -49,6 +49,10 @@ existe.
 - Añade una entrada en `CHANGELOG.md`, en la sección `[Unreleased]`.
 - Rellena la plantilla del pull request. La CI tiene que pasar.
 
+Los PR de Dependabot con cambios patch o minor se fusionan solos cuando pasa la CI
+(`dependabot-auto-merge.yml`). Los major quedan abiertos con un comentario para revisarlos a mano.
+Si uno se queda parado porque `main` ha avanzado, comenta `@dependabot rebase` en el PR.
+
 ## Publicar una versión (mantenedores)
 
 1. Mueve las entradas de `[Unreleased]` a una sección `## [X.Y.Z] - AAAA-MM-DD` en `CHANGELOG.md` y

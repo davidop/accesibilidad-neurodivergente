@@ -9,6 +9,13 @@ La versión de referencia es `metadata.version` en
 
 ## [Unreleased]
 
+### Cambiado
+
+- Los PR de Dependabot con actualizaciones patch o minor se fusionan solos cuando pasa la CI; las
+  major siguen necesitando revisión manual.
+- Acciones de GitHub actualizadas: `actions/checkout` v7, `astral-sh/setup-uv` v7 y
+  `softprops/action-gh-release` v3.
+
 ## [0.1.1] - 2026-10-26
 
 ### Añadido
