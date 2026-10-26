@@ -1,0 +1,47 @@
+name: Release
+
+# Al publicar una etiqueta vX.Y.Z se genera el .zip que pide Claude (web/escritorio)
+# para subir la skill, con las notas de esa versión sacadas del CHANGELOG.
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      SKILL: accesibilidad-neurodivergente
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Comprobar que la etiqueta coincide con la versión
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          grep -q "^  version: \"$version\"$" "skills/$SKILL/SKILL.md" \
+            || { echo "::error::metadata.version de SKILL.md no es $version"; exit 1; }
+          grep -q "^## \[$version\]" CHANGELOG.md \
+            || { echo "::error::CHANGELOG.md no tiene la sección [$version]"; exit 1; }
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Extraer notas del CHANGELOG
+        run: |
+          awk -v v="$VERSION" '
+            index($0, "## [" v "]") == 1 { found = 1; next }
+            /^## \[/ { found = 0 }
+            /^\[[^]]+\]: / { next }
+            found
+          ' CHANGELOG.md > release-notes.md
+          cat release-notes.md
+
+      - name: Empaquetar la skill
+        run: |
+          cd skills
+          zip -r "../$SKILL-$GITHUB_REF_NAME.zip" "$SKILL" -x '*/__pycache__/*'
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: release-notes.md
+          files: ${{ env.SKILL }}-${{ github.ref_name }}.zip

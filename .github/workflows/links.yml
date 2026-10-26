@@ -1,0 +1,29 @@
+name: Enlaces
+
+# references/fuentes.md es una lista de enlaces externos: si se rompen, la skill
+# cita fuentes que ya no existen. Se revisan cada semana y en los PR que tocan Markdown.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  pull_request:
+    paths: ["**/*.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    name: Comprobar enlaces
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # 403 y 429: muchos sitios bloquean bots o limitan peticiones aunque el enlace funcione.
+          args: >-
+            --no-progress
+            --max-retries 3
+            --accept '100..=103,200..=299,403,429'
+            './**/*.md'
+          fail: true
