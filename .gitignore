@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Paquetes generados por la release
+*.zip
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
