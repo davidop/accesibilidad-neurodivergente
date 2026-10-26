@@ -15,7 +15,7 @@ jobs:
     env:
       SKILL: accesibilidad-neurodivergente
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Comprobar que la etiqueta coincide con la versión
         run: |
@@ -41,7 +41,7 @@ jobs:
           cd skills
           zip -r "../$SKILL-$GITHUB_REF_NAME.zip" "$SKILL" -x '*/__pycache__/*'
 
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           body_path: release-notes.md
           files: ${{ env.SKILL }}-${{ github.ref_name }}.zip
