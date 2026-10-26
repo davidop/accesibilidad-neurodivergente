@@ -2,7 +2,7 @@
 # se distribuye copiando la carpeta skills/accesibilidad-neurodivergente/.
 [project]
 name = "accesibilidad-neurodivergente"
-version = "0.1.0"
+version = "0.1.1"
 description = "Skill para agentes de IA que audita y reescribe contenido pensando en accesibilidad cognitiva y neurodivergencia."
 readme = "README.md"
 license = "MIT"

@@ -9,6 +9,8 @@ La versión de referencia es `metadata.version` en
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-26
+
 ### Añadido
 
 - Tests automáticos: validación de `SKILL.md` contra la especificación Agent Skills y pruebas de
@@ -40,5 +42,6 @@ La versión de referencia es `metadata.version` en
 - Script opcional `scripts/audit_render.py` para auditar HTML renderizado con Playwright.
 - Recopilación de fuentes en `references/fuentes.md`.
 
-[Unreleased]: https://github.com/davidop/accesibilidad-neurodivergente/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/davidop/accesibilidad-neurodivergente/releases/tag/v0.1.0
+[Unreleased]: https://github.com/davidop/accesibilidad-neurodivergente/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/davidop/accesibilidad-neurodivergente/compare/3a55294...v0.1.1
+[0.1.0]: https://github.com/davidop/accesibilidad-neurodivergente/commit/3a55294
