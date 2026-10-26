@@ -1,0 +1,31 @@
+# Solo para desarrollo (tests y lint). La skill no necesita instalar nada:
+# se distribuye copiando la carpeta skills/accesibilidad-neurodivergente/.
+[project]
+name = "accesibilidad-neurodivergente"
+version = "0.1.0"
+description = "Skill para agentes de IA que audita y reescribe contenido pensando en accesibilidad cognitiva y neurodivergencia."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "playwright>=1.40",
+    "pytest>=8",
+    "pyyaml>=6",
+    "ruff>=0.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
