@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Informar de una vulnerabilidad
+    url: https://github.com/davidop/accesibilidad-neurodivergente/security/advisories/new
+    about: No abras un issue público para problemas de seguridad. Consulta SECURITY.md.

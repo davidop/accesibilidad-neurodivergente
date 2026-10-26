@@ -1,0 +1,59 @@
+name: Informar de un fallo
+description: La skill responde mal, no se activa o el script audit_render.py falla.
+title: "[Fallo] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **No incluyas datos personales reales** ni contenido confidencial. Si el fallo depende de un
+        documento o página privada, reprodúcelo con un ejemplo ficticio.
+
+  - type: dropdown
+    id: componente
+    attributes:
+      label: Componente
+      options:
+        - Comportamiento de la skill (SKILL.md)
+        - Script scripts/audit_render.py
+        - Documentación
+    validations:
+      required: true
+
+  - type: input
+    id: agente
+    attributes:
+      label: Agente y versión
+      placeholder: "Claude Code 2.x, Codex CLI 0.x, GitHub Copilot en VS Code 1.x..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Qué hiciste
+      description: Petición o comando exacto que lanzaste.
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperabas
+    validations:
+      required: true
+
+  - type: textarea
+    id: obtenido
+    attributes:
+      label: Qué pasó
+      description: Incluye la salida o el error. Se formatea como código automáticamente.
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno (solo si falla el script)
+      placeholder: "Windows 11, Python 3.12, Playwright 1.61"

@@ -1,0 +1,41 @@
+name: Informe de compatibilidad
+description: Cuéntanos si la skill funciona en tu herramienta para completar la tabla del README.
+title: "[Compatibilidad] "
+labels: ["compatibilidad"]
+body:
+  - type: dropdown
+    id: herramienta
+    attributes:
+      label: Herramienta
+      options:
+        - Claude Code
+        - Claude (web/escritorio)
+        - Codex CLI
+        - GitHub Copilot (VS Code)
+        - GitHub Copilot (Visual Studio)
+        - Otra
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versión de la herramienta
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: resultado
+    attributes:
+      label: Resultado
+      options:
+        - label: La skill se carga (aparece en la lista de skills)
+        - label: Se activa sola con una petición de accesibilidad, sin nombrarla
+        - label: Las respuestas usan las etiquetas [WCAG] / [Guía] / [Heurística]
+        - label: El script audit_render.py se ejecuta correctamente
+
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas
+      description: Ruta de instalación usada, problemas encontrados, petición de prueba.
