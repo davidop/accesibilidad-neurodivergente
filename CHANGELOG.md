@@ -9,6 +9,21 @@ La versión de referencia es `metadata.version` en
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-07
+
+### Añadido
+
+- Flujo de la skill para crear y revisar declaraciones de accesibilidad de repositorios GitHub.
+- Guía de referencia con estructura, evidencia y ejemplos para `ACCESSIBILITY.md`.
+- Declaración de accesibilidad del proyecto, accesible desde el README.
+- Plantilla para comunicar barreras sin exigir diagnóstico, capturas o grabaciones.
+- Pruebas de presencia y contenido básico de la declaración y su plantilla.
+
+### Cambiado
+
+- Orientaciones para colaboradores y agentes de IA sobre documentación y verificación.
+- Versión sincronizada en `SKILL.md`, `pyproject.toml` y `uv.lock`.
+
 ### Cambiado
 
 - Los PR de Dependabot con actualizaciones patch o minor se fusionan solos cuando pasa la CI; las
@@ -49,6 +64,7 @@ La versión de referencia es `metadata.version` en
 - Script opcional `scripts/audit_render.py` para auditar HTML renderizado con Playwright.
 - Recopilación de fuentes en `references/fuentes.md`.
 
-[Unreleased]: https://github.com/davidop/accesibilidad-neurodivergente/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/davidop/accesibilidad-neurodivergente/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/davidop/accesibilidad-neurodivergente/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/davidop/accesibilidad-neurodivergente/compare/3a55294...v0.1.1
 [0.1.0]: https://github.com/davidop/accesibilidad-neurodivergente/commit/3a55294
