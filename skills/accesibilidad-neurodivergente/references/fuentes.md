@@ -54,7 +54,7 @@ Nota: la relación color–sobrecarga sensorial se apoya en la bibliografía de 
 
 ## Declaraciones de accesibilidad para repositorios GitHub
 - GitHub Blog (5 de noviembre de 2026), «Accessibility statements now have a home on GitHub»: https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/
-- GitHub Docs, instrucciones para añadir una declaración de accesibilidad: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-statement-to-your-repository
+- GitHub Docs, instrucciones para añadir una declaración de accesibilidad: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-page-to-your-repository
 - Guía práctica de esta skill: `references/declaracion-accesibilidad.md`.
 
 Esta funcionalidad mejora la visibilidad de una declaración; no supone una auditoría automática ni conformidad WCAG.
