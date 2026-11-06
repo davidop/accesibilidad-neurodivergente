@@ -1,2 +1,5 @@
 # Enlaces al propio repositorio: dependen de etiquetas, releases y avisos que aún pueden no existir.
 ^https://github\.com/davidop/accesibilidad-neurodivergente/
+
+# ScienceDirect devuelve 400 al verificador automatizado (fuente académica preexistente).
+^https://www\.sciencedirect\.com/science/article/pii/S014976342100049X$
