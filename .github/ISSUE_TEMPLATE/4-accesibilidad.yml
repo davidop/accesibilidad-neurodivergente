@@ -1,0 +1,36 @@
+name: Comunicar una barrera de accesibilidad
+description: Describe por texto una dificultad al utilizar la skill o la documentación.
+title: "[Accesibilidad] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por ayudarnos a mejorar. No hace falta revelar discapacidad ni neurotipo,
+        ni adjuntar capturas, grabaciones o informes médicos. No incluyas datos confidenciales.
+        Puedes consultar [la declaración de accesibilidad](../../ACCESSIBILITY.md).
+  - type: textarea
+    id: barrera
+    attributes:
+      label: Qué querías hacer y qué ocurrió
+      description: Describe la tarea y la barrera con tus palabras.
+      placeholder: "Estaba intentando... y me encontré con..."
+    validations:
+      required: true
+  - type: input
+    id: ubicacion
+    attributes:
+      label: Archivo, pantalla o enlace (opcional)
+      placeholder: "README.md o ruta a un archivo"
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué habría facilitado la tarea (opcional)
+  - type: textarea
+    id: entorno
+    attributes:
+      label: Entorno o tecnología asistiva (opcional)
+      description: Indica solo lo que quieras compartir.
+  - type: textarea
+    id: alternativa
+    attributes:
+      label: Alternativa o solución temporal (opcional)

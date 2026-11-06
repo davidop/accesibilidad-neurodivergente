@@ -16,6 +16,8 @@ WCAG es el suelo, no el techo: la skill va más allá de la checklist sin caer e
   priorizados por severidad.
 - **Diseña** patrones concretos (CSS, HTML semántico, copy) que respetan las preferencias del usuario.
 - **Reescribe** contenido en lenguaje claro sin cambiar el significado.
+- **Documenta** la accesibilidad de proyectos GitHub con `ACCESSIBILITY.md`, limitaciones conocidas,
+  proceso de reporte y criterios claros para personas y agentes de IA.
 - Cada recomendación lleva una etiqueta de evidencia: `[WCAG]`, `[Guía]` o `[Heurística]`.
 
 ## Qué no hace
@@ -75,6 +77,7 @@ evidencia, el arreglo concreto y la severidad.
 skills/accesibilidad-neurodivergente/
 ├── SKILL.md                  Instrucciones de la skill (formato Agent Skills)
 ├── references/fuentes.md     Fuentes y lecturas (lista de referencias, no estudios verificados uno a uno)
+├── references/declaracion-accesibilidad.md  Guía para ACCESSIBILITY.md
 └── scripts/audit_render.py   Renderiza un HTML con Playwright y devuelve métricas de accesibilidad en JSON
 ```
 
@@ -97,6 +100,14 @@ python3 -I skills/accesibilidad-neurodivergente/scripts/audit_render.py https://
 ```
 
 Es una ayuda, no un veredicto: no sustituye a un lector de pantalla ni a pruebas con personas usuarias.
+
+## Declaración de accesibilidad
+
+Consulta [ACCESSIBILITY.md](ACCESSIBILITY.md) para conocer el alcance y las limitaciones verificadas,
+comunicar una barrera o proponer mejoras. GitHub reconoce este archivo como documentación de
+accesibilidad del proyecto. La skill también incluye una
+[guía para crear declaraciones](skills/accesibilidad-neurodivergente/references/declaracion-accesibilidad.md)
+en otros repositorios. Una declaración publicada no es una certificación de cumplimiento WCAG.
 
 ## Contribuir
 

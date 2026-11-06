@@ -24,6 +24,19 @@ por evidencia y casos reales en los que la skill acierta o falla.
 5. **Mantén `SKILL.md` breve.** La especificación Agent Skills recomienda menos de 500 líneas; el
    material de consulta largo va en `references/`.
 
+## Accesibilidad de las contribuciones
+
+Lee [ACCESSIBILITY.md](ACCESSIBILITY.md) antes de cambiar la experiencia de uso o su documentación.
+Describe la barrera que resuelve el cambio, adjunta un ejemplo reproducible sin datos personales y
+separa los tests que has ejecutado de los que siguen pendientes. Los agentes de IA deben aplicar
+las mismas comprobaciones que las personas: revisión de lenguaje claro, estructura Markdown,
+navegación por teclado cuando aplique y pruebas con tecnologías asistivas cuando estén disponibles.
+Ningún resultado automático permite afirmar conformidad WCAG por sí solo.
+
+Los reportes de barreras se realizan mediante la plantilla «Barrera de accesibilidad»; no se pide
+información médica, grabaciones ni capturas obligatorias. El mantenedor valora el impacto y deja
+constancia del seguimiento en el issue.
+
 ## Entorno de desarrollo
 
 Necesitas [uv](https://docs.astral.sh/uv/). La skill en sí no necesita instalar nada: esto solo
