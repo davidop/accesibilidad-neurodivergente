@@ -31,9 +31,7 @@ def test_accessibility_issue_is_text_based_and_respects_privacy():
     assert any(field.get("type") == "textarea" for field in fields)
     assert all(field.get("type") != "upload" for field in fields)
     assert "neurotipo" in fields[0]["attributes"]["value"]
-    assert "issues/new?template=4-accesibilidad.yml" in (
-        ROOT / "ACCESSIBILITY.md"
-    ).read_text(encoding="utf-8")
+    assert "issues/new?template=4-accesibilidad.yml" in (ROOT / "ACCESSIBILITY.md").read_text(encoding="utf-8")
 
 
 def test_skill_documents_accessibility_statement_workflow():
