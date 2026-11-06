@@ -60,4 +60,4 @@ GitHub muestra el archivo como recurso de accesibilidad, pero no certifica el pr
 
 Fuentes:
 - GitHub Blog: https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/
-- GitHub Docs: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-statement-to-your-repository
+- GitHub Docs: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-page-to-your-repository
